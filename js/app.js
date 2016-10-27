@@ -15,9 +15,6 @@ fonemasApp.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/public/estudio.html'
 	}).when('/otros_trastornos', {
 		templateUrl : 'partials/public/otros_trastornos.html'
-	}).when('/factura/:facturaId', {
-		templateUrl : 'partials/private/factura.html',
-		controller:'facturasController'
 	}).otherwise({
 		redirectTo : '/main'
 	});
@@ -44,14 +41,12 @@ fonemasApp
 
 						var infowindow = new google.maps.InfoWindow(
 								{
-									content : '<div id="content">'
-											+ '<div id="siteNotice">'
-											+ '</div>'
-											+ '<h2 id="firstHeading" class="firstHeading"><img src="images/logo_trans.png" alt="Logo here" /></h2>'
-											+ '<div id="bodyContent">' +
+									content : '<div>'
 
-											'<p>Avda. Doctor Garcia Tapia, 145</p>'
-											+ '<p>Moratalaz, Madrid 28030.</p>'
+											+ '<h2  ><img src="img/logo_trans.png" width="60%"  /></h2>'
+											+ '<div style="padding-left:5em;font-size:1.3em;padding-top:1em">'
+                                            +   '<p>Avda. Doctor Garcia Tapia, 145</p>'
+											+   '<p>Moratalaz, Madrid 28030.</p>'
 											+ '</div>' + '</div>'
 								});
 						map = new google.maps.Map(elem[0], mapOptions);
