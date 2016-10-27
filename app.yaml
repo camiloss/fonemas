@@ -12,6 +12,22 @@
 # limitations under the License.
 
 # [START app_yaml]
-runtime: nodejs
-vm: true
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /img
+  static_dir: img
+ 
+- url: /js
+  static_dir: js
+  
+- url: /partials
+  static_dir: partials
+  
+- url: /.*
+  script: index.html
 # [END app_yaml]
